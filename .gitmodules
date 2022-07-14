@@ -1,0 +1,3 @@
+[submodule "thicknessML"]
+	path = thicknessML
+	url = https://github.com/PV-Lab/thicknessML
