@@ -36,9 +36,9 @@ agilent = [
     "pyvisa~=1.13"
 ]
 full = [
-    "cohesivm[gui,ma8x8,ossila,agilent]"
+    "d-sem[gui,ma8x8,ossila,agilent]"
 ]
 dev = [
-    "cohesivm[full]",
+    "d-sem[full]",
     "pytest~=7.3"
 ]
