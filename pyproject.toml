@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "d-sem"
+version = "0.0.1"
+authors = [
+    { name="Maximilian Wolf", email="wolf.maxi@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "h5py~=3.8",
+    "numpy~=1.21",
+    "matplotlib~=3.7",
+    "tqdm~=4.65"
+]
+
+[project.optional-dependencies]
+gui = [
+    "bqplot~=0.12"
+]
+ma8x8 = [
+    "pyserial~=3.5"
+]
+ossila = [
+    "xtralien~=2.10"
+]
+agilent = [
+    "pyvisa~=1.13"
+]
+full = [
+    "cohesivm[gui,ma8x8,ossila,agilent]"
+]
+dev = [
+    "cohesivm[full]",
+    "pytest~=7.3"
+]
